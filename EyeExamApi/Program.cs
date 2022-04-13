@@ -1,8 +1,12 @@
+using Microsoft.AspNetCore.Mvc;
+
 var builder = WebApplication.CreateBuilder(args);
 
-
+// DI
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<IRawScheduleDataService, RawScheduleDataService>();
+builder.Services.AddScoped<IParsedScheduleDataService, ParsedScheduleDataService>();
 
 var app = builder.Build();
 
@@ -15,6 +19,12 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.MapGet("/", () => "Hello World");
+app.MapGet("/schedules", ([FromServices] IRawScheduleDataService rawScheduleDataService) => {
+    return rawScheduleDataService.GetRawScheduleNoticeOfLeases();
+});
+
+app.MapGet("/results", ([FromServices] IParsedScheduleDataService parsedScheduleDataService) => { 
+    return parsedScheduleDataService.GetParsedScheduleNoticOfLeases();
+});
 
 app.Run();
