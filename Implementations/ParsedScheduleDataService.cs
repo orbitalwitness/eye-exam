@@ -1,12 +1,17 @@
-public class ParsedScheduleDataService : IParsedScheduleDataService
+using EyeExamApi.DTOs;
+using EyeExamApi.Interfaces;
+
+namespace EyeExamApi.Implementations
 {
-    public IEnumerable<ParsedScheduleNoticeOfLease> GetParsedScheduleNoticOfLeases()
+    public class ParsedScheduleDataService : IParsedScheduleDataService
     {
-        return new List<ParsedScheduleNoticeOfLease>()
+        public IEnumerable<ParsedScheduleNoticeOfLease> GetParsedScheduleNoticeOfLeases()
+        {
+            return new List<ParsedScheduleNoticeOfLease>()
         {
             new ParsedScheduleNoticeOfLease()
             {
-                EntryNumber = 1, 
+                EntryNumber = 1,
                 EntryDate = null,
                 RegistrationDateAndPlanRef = "09.07.2009 Edged and numbered 2 in blue (part of)",
                 PropertyDescription = "Endeavour House, 47 Cuba Street, London",
@@ -15,7 +20,7 @@ public class ParsedScheduleDataService : IParsedScheduleDataService
             },
             new ParsedScheduleNoticeOfLease()
             {
-                EntryNumber = 2, 
+                EntryNumber = 2,
                 EntryDate = null,
                 RegistrationDateAndPlanRef = "15.11.2018 Edged and numbered 2 in blue (part of)",
                 PropertyDescription = "Ground Floor Premises",
@@ -24,7 +29,7 @@ public class ParsedScheduleDataService : IParsedScheduleDataService
             },
             new ParsedScheduleNoticeOfLease()
             {
-                EntryNumber = 3, 
+                EntryNumber = 3,
                 EntryDate = null,
                 RegistrationDateAndPlanRef = "16.08.2013",
                 PropertyDescription = "21 Sheen Road (Ground floor shop)",
@@ -33,7 +38,7 @@ public class ParsedScheduleDataService : IParsedScheduleDataService
             },
             new ParsedScheduleNoticeOfLease()
             {
-                EntryNumber = 4, 
+                EntryNumber = 4,
                 EntryDate = null,
                 RegistrationDateAndPlanRef = "24.07.1989 Edged and numbered 25 (Part of) in brown",
                 PropertyDescription = "17 Ashworth Close (Ground and First Floor Flat)",
@@ -47,7 +52,7 @@ public class ParsedScheduleDataService : IParsedScheduleDataService
             },
             new ParsedScheduleNoticeOfLease()
             {
-                EntryNumber = 5, 
+                EntryNumber = 5,
                 EntryDate = null,
                 RegistrationDateAndPlanRef = "19.09.1989 Edged and numbered 25 (Part of) in brown",
                 PropertyDescription = "12 Harbord Close (Ground and First Floor Flat)",
@@ -58,5 +63,6 @@ public class ParsedScheduleDataService : IParsedScheduleDataService
                 }
             }
         };
+        }
     }
 }

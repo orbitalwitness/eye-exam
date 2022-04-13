@@ -10,22 +10,29 @@ This API has two routes:
 1. Results GET
      The Expected Output of *your* API we expect to see. 
 
-Your job is to write a new C# .NET API to consume this API that can take the raw Schedule data and parse it into the same format as the data provided on the /results/ route (don't worry about the order of the results, only the accuracy of the parsing). Your solution should implement some sort of storage or caching so that repeat calls don't incur repeat processing. 
+Your job is to write a *new* C# .NET API to consume this API that can take the raw Schedule data and parse it into the same format as the data provided on the /results/ route (don't worry about the order of the results, only the accuracy of the parsing). Your solution should implement some sort of storage or caching so that repeat calls don't incur repeat processing. 
 
-We will test your submitted API against our internal `EYEEXAMAPI` so no modification to the provided code is necessary.
+No modification to the provided code should be necessary `EYEEXAMAPI`.
 
 # Run Instructions
-The API was built with .NET 6 Minimal API.  
-To run with VSStudio,
+
+## Dependencies
+The API was built with .NET 6 Minimal API. As such you'll need the .NET 6 SDK and relevant dev tools.   
+
+## To run with VSStudio / Ryder,
 1. Open the EyeExamApi.csproj
 1. Hit Debug. 
-1. You may want to wrap this project and your project in a .sln file.
+1. Api will open and navigate to swagger. 
 
-To run with VSCode 
+## To run with VSCode 
 1. Open your terminal.
-1. Navigate to `/eye-exam/EYEEXAMAPI` 
+1. Navigate to `/EYEEXAMAPI` 
 1. Run `dotnet run`
-1. You may need to run `dotnet dev-certs https --trust` to accept the dotnet dev ssl cert. 
+1. Navigate to `https://localhost:7203/swagger/index.html` 
+1. You may need to run `dotnet dev-certs https --trust` to accept the dotnet dev ssl cert
+
+## Auth
+The API uses Basic auth and the credentials can be find the in the appSettings json.
 
 # What we're looking for
 
@@ -35,6 +42,7 @@ To run with VSCode
      * SOLID Principles
      * SoC
      * Code readability
+     * Well documented code.
 * Simple to run or well documented startup.
 * Accurate Result Set.
 * Test Coverage.
@@ -44,8 +52,8 @@ Extra points are available for
 * Algorithm extensibility for future cases
 * External visiblity and live diagnostics (think: logging, telemetry etc)
 * Consideration of hosting + deployment (Docker, Serverless etc) 
-* Architecture documentation
-* Write up of next steps to get the solution to production.
+* Write up of next steps to get the solution to production
+* _anything else you think is relevant, get creative_ 
 
 ## Time
 We expect this to take no more than two hours to cover the core competencies above, if you decide to spend more time to show off or hit some bonus points you're more welcome to!

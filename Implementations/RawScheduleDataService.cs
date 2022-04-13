@@ -1,20 +1,25 @@
-public class RawScheduleDataService : IRawScheduleDataService
+using EyeExamApi.DTOs;
+using EyeExamApi.Interfaces;
+
+namespace EyeExamApi.Implementations
 {
-    private readonly Random _rng;
-
-    public RawScheduleDataService()
+    public class RawScheduleDataService : IRawScheduleDataService
     {
-        _rng = new Random();
-    }
+        private readonly Random _rng;
 
-    /// <summary>
-    /// Returns a collection of example Raw Schedule data.
-    /// ... in a semi random order ;).
-    /// </summary>
-    /// <returns></returns>
-    public IEnumerable<RawScheduleNoticeOfLease> GetRawScheduleNoticeOfLeases()
-    {
-        var results = new List<RawScheduleNoticeOfLease>()
+        public RawScheduleDataService()
+        {
+            _rng = new Random();
+        }
+
+        /// <summary>
+        /// Returns a collection of example Raw Schedule data.
+        /// ... in a semi random order ;).
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<RawScheduleNoticeOfLease> GetRawScheduleNoticeOfLeases()
+        {
+            var results = new List<RawScheduleNoticeOfLease>()
         {
             new RawScheduleNoticeOfLease()
             {
@@ -89,6 +94,7 @@ public class RawScheduleDataService : IRawScheduleDataService
             }
         };
 
-        return results.OrderBy(a => _rng.Next());
+            return results.OrderBy(a => _rng.Next());
+        }
     }
 }

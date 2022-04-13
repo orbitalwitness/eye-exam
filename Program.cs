@@ -1,4 +1,5 @@
 using EyeExamApi.Implementations;
+using EyeExamApi.Interfaces;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -37,6 +38,7 @@ builder.Services.AddSwaggerGen(o =>
         }
     });
 });
+
 builder.Services.AddScoped<IRawScheduleDataService, RawScheduleDataService>();
 builder.Services.AddScoped<IParsedScheduleDataService, ParsedScheduleDataService>();
 
@@ -58,7 +60,7 @@ app.MapGet("/schedules", [Authorize] ([FromServices] IRawScheduleDataService raw
 });
 
 app.MapGet("/results", [Authorize] ([FromServices] IParsedScheduleDataService parsedScheduleDataService) => { 
-    return parsedScheduleDataService.GetParsedScheduleNoticOfLeases();
+    return parsedScheduleDataService.GetParsedScheduleNoticeOfLeases();
 });
 
 app.Run();

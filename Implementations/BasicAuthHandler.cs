@@ -22,7 +22,7 @@ namespace EyeExamApi.Implementations
 
 
         /// <summary>
-        /// Dummy custom auth handler, because mimimal APIs regressed in this a bit.
+        /// Dummy custom auth handler, because minimal APIs regressed in this a bit.
         /// </summary>
         /// <returns></returns>
         protected override async Task<AuthenticateResult> HandleAuthenticateAsync()
