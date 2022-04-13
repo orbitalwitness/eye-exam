@@ -19,7 +19,7 @@ No modification to the provided code should be necessary `EYEEXAMAPI`.
 ## Dependencies
 The API was built with .NET 6 Minimal API. As such you'll need the .NET 6 SDK and relevant dev tools.   
 
-## To run with VSStudio / Ryder,
+## To run with VSStudio / Ryder
 1. Open the EyeExamApi.csproj
 1. Hit Debug. 
 1. Api will open and navigate to swagger. 
