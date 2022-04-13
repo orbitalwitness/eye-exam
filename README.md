@@ -1,2 +1,2 @@
 # eye-exam
-Because we're tests your ability to C#.
+Because we're testing your ability to C#.
