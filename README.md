@@ -56,7 +56,7 @@ Extra points are available for
 * _anything else you think is relevant, get creative_ 
 
 ## Time
-We expect this to take no more than two hours to cover the core competencies above, if you decide to spend more time to show off or hit some bonus points you're more welcome to!
+We expect this to take no more than two hours to cover the core competencies above, if you decide to spend more time to show off or hit some bonus points you're more than welcome to!
 
 If you find yourself running out of time prior to completing the entire problem, we will also review partial submissions paired with a write up of what your next steps would have been.
 
