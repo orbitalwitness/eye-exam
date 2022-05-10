@@ -40,7 +40,7 @@ namespace EyeExamApi.Implementations
             {
                 EntryNumber = 4,
                 EntryDate = null,
-                RegistrationDateAndPlanRef = "24.07.1989 Edged and numbered 25 (Part of) in brown",
+                RegistrationDateAndPlanRef = "24.07.1989 Edged and numbered 19 (Part of) in brown",
                 PropertyDescription = "17 Ashworth Close (Ground and First Floor Flat)",
                 DateOfLeaseAndTerm = "01.06.1989 125 years from 1.6.1989",
                 LesseesTitle = "TGL24029",
